@@ -1,0 +1,78 @@
+provider: tokensbd
+label:
+  en_US: tokens.bd
+description:
+  en_US: Claude, GPT, Gemini, DeepSeek, Qwen, GLM, Kimi and more through one tokens.bd API key, with plan or pay-as-you-go billing in USD or BDT.
+icon_small:
+  en_US: icon.svg
+icon_small_dark:
+  en_US: icon-dark.svg
+icon_large:
+  en_US: icon_l_en.svg
+icon_large_dark:
+  en_US: icon_l_en_dark.svg
+background: "#E8F5EF"
+help:
+  title:
+    en_US: Get your API key from tokens.bd
+  url:
+    en_US: https://tokens.bd/dashboard/keys
+supported_model_types:
+  - llm
+configurate_methods:
+  - predefined-model
+  - customizable-model
+provider_credential_schema:
+  credential_form_schemas:
+    - variable: api_key
+      label:
+        en_US: API Key
+      type: secret-input
+      required: true
+      placeholder:
+        en_US: Your tokens.bd API key
+    - variable: endpoint_url
+      label:
+        en_US: API Base URL
+      type: text-input
+      required: false
+      placeholder:
+        en_US: https://tokens.bd/v1 (leave empty)
+model_credential_schema:
+  model:
+    label:
+      en_US: Model ID
+    placeholder:
+      en_US: A model id from tokens.bd/models, for example anthropic/claude-opus-5-5
+  credential_form_schemas:
+    - variable: api_key
+      label:
+        en_US: API Key
+      type: secret-input
+      required: true
+      placeholder:
+        en_US: Your tokens.bd API key
+    - variable: endpoint_url
+      label:
+        en_US: API Base URL
+      type: text-input
+      required: false
+      placeholder:
+        en_US: https://tokens.bd/v1 (leave empty)
+    - variable: display_name
+      label:
+        en_US: Display name (optional)
+      type: text-input
+      required: false
+      placeholder:
+        en_US: The name to show in Dify; the model's name on tokens.bd when empty
+models:
+  llm:
+    position: models/llm/_position.yaml
+    predefined:
+      - models/llm/*.yaml
+extra:
+  python:
+    provider_source: provider/tokensbd.py
+    model_sources:
+      - models/llm/llm.py

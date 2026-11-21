@@ -1,0 +1,28 @@
+name: Test and package
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install
+        run: pip install -r requirements.txt -r requirements-dev.txt
+      - name: Unit tests
+        run: python -m pytest -q
+      - name: Package
+        run: |
+          curl -sSL -o "$RUNNER_TEMP/dify" https://github.com/langgenius/dify-plugin-daemon/releases/download/0.6.15/dify-plugin-linux-amd64
+          chmod +x "$RUNNER_TEMP/dify"
+          "$RUNNER_TEMP/dify" plugin package . -o "$RUNNER_TEMP/tokensbd.difypkg"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: tokensbd-difypkg
+          path: ${{ runner.temp }}/tokensbd.difypkg

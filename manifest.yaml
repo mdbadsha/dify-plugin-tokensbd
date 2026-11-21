@@ -1,0 +1,34 @@
+version: 0.1.0
+type: plugin
+author: mdbadsha
+name: tokensbd
+label:
+  en_US: tokens.bd
+description:
+  en_US: Claude, GPT, Gemini, DeepSeek, Qwen, GLM, Kimi and more through one tokens.bd API key. Models ready to use, figures filled in from tokens.bd.
+icon: icon.svg
+icon_dark: icon-dark.svg
+resource:
+  memory: 268435456
+  permission: {}
+plugins:
+  models:
+    - provider/tokensbd.yaml
+meta:
+  version: 0.0.1
+  arch:
+    - amd64
+    - arm64
+  runner:
+    language: python
+    version: "3.12"
+    entrypoint: main
+  minimum_dify_version: "1.14.2"
+created_at: 2026-11-21T17:37:39+06:00
+privacy: PRIVACY.md
+repo: https://github.com/mdbadsha/dify-plugin-tokensbd
+contact: info@tokens.bd
+network:
+  domains:
+    - tokens.bd
+verified: false
