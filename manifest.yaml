@@ -24,7 +24,7 @@ meta:
     version: "3.12"
     entrypoint: main
   minimum_dify_version: "1.14.2"
-created_at: 2026-11-21T17:37:39+06:00
+created_at: 2026-11-21T17:53:35+06:00
 privacy: PRIVACY.md
 repo: https://github.com/mdbadsha/dify-plugin-tokensbd
 contact: info@tokens.bd

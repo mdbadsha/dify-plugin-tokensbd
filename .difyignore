@@ -183,3 +183,4 @@ pytest.ini
 uv.lock
 *.md.bak
 requirements-dev.txt
+.gitattributes
