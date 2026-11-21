@@ -174,8 +174,8 @@ def model_info(model: str, credentials: dict) -> ModelInfo | None:
 _SDK_STATUS = re.compile(r"status code (\d{3})\s*:\s*(.*)", re.S)
 
 _ADVICE: dict[str, str] = {
-    "missing_api_key": f"Enter your tokens.bd API key in the provider settings ({DASHBOARD_URL}/keys).",
-    "invalid_api_key": f"Check the API key in the provider settings, or create a new one at {DASHBOARD_URL}/keys.",
+    "missing_api_key": f"Enter your tokens.bd API key ({DASHBOARD_URL}/keys).",
+    "invalid_api_key": f"Check the API key, or create a new one at {DASHBOARD_URL}/keys.",
     "key_inactive": f"This key is turned off. Turn it on or use another key at {DASHBOARD_URL}/keys.",
     "key_expired": f"This key has expired. Create a new one at {DASHBOARD_URL}/keys.",
     "insufficient_credits": f"Top up your wallet or choose a plan at {DASHBOARD_URL}/billing.",

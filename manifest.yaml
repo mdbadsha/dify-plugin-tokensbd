@@ -5,7 +5,7 @@ name: tokensbd
 label:
   en_US: tokens.bd
 description:
-  en_US: Claude, GPT, Gemini, DeepSeek, Qwen, GLM, Kimi and more through one tokens.bd API key. Models ready to use, figures filled in from tokens.bd.
+  en_US: Claude, GPT, Gemini, DeepSeek, Qwen, GLM, Kimi and more through one tokens.bd API key. Add a model by its ID; its limits and features are filled in from tokens.bd.
 icon: icon.svg
 icon_dark: icon-dark.svg
 resource:
@@ -24,7 +24,7 @@ meta:
     version: "3.12"
     entrypoint: main
   minimum_dify_version: "1.14.2"
-created_at: 2026-11-21T17:53:35+06:00
+created_at: 2026-11-21T18:17:13+06:00
 privacy: PRIVACY.md
 repo: https://github.com/mdbadsha/dify-plugin-tokensbd
 contact: info@tokens.bd

@@ -20,24 +20,7 @@ help:
 supported_model_types:
   - llm
 configurate_methods:
-  - predefined-model
   - customizable-model
-provider_credential_schema:
-  credential_form_schemas:
-    - variable: api_key
-      label:
-        en_US: API Key
-      type: secret-input
-      required: true
-      placeholder:
-        en_US: Your tokens.bd API key
-    - variable: endpoint_url
-      label:
-        en_US: API Base URL
-      type: text-input
-      required: false
-      placeholder:
-        en_US: https://tokens.bd/v1 (leave empty)
 model_credential_schema:
   model:
     label:
@@ -66,11 +49,6 @@ model_credential_schema:
       required: false
       placeholder:
         en_US: The name to show in Dify; the model's name on tokens.bd when empty
-models:
-  llm:
-    position: models/llm/_position.yaml
-    predefined:
-      - models/llm/*.yaml
 extra:
   python:
     provider_source: provider/tokensbd.py
